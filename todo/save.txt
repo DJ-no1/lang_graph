@@ -1,0 +1,105 @@
+{
+  "todos": [
+    {
+      "taskid": "Task1",
+      "title": "Buy Groceries",
+      "concise_description": "Purchase necessary food and household items.",
+      "due_date": null,
+      "priority": null,
+      "category": "personal",
+      "status": "haven't started",
+      "description": "Purchase necessary food and household items."
+    },
+    {
+      "taskid": "Task2",
+      "title": "Call Dad",
+      "concise_description": "Make a phone call to father.",
+      "due_date": null,
+      "priority": null,
+      "category": "personal",
+      "status": "haven't started",
+      "description": "Make a phone call to father."
+    },
+    {
+      "taskid": "Task3",
+      "title": "Finish Biology Project Report",
+      "concise_description": "Complete and finalize the biology project report.",
+      "due_date": "15th Aug",
+      "priority": null,
+      "category": "college",
+      "status": "haven't started",
+      "description": "Complete and finalize the biology project report."
+    },
+    {
+      "taskid": "Task4",
+      "title": "Do Laundry",
+      "concise_description": "Wash and dry clothes.",
+      "due_date": "Today",
+      "priority": null,
+      "category": "personal",
+      "status": "haven't started",
+      "description": "Wash and dry clothes."
+    },
+    {
+      "taskid": "Task5",
+      "title": "Call Boss for Appraisal Offer",
+      "concise_description": "Contact boss to discuss and receive appraisal offer.",
+      "due_date": null,
+      "priority": null,
+      "category": "work",
+      "status": "haven't started",
+      "description": "Contact boss to discuss and receive appraisal offer."
+    },
+    {
+      "taskid": 1,
+      "title": "Buy Groceries",
+      "concise_description": "Purchased food and household items.",
+      "due_date": null,
+      "priority": null,
+      "category": "personal",
+      "status": "completed",
+      "description": "Purchased food and household items."
+    },
+    {
+      "taskid": 2,
+      "title": "Call Dad",
+      "concise_description": "Phoned father.",
+      "due_date": null,
+      "priority": null,
+      "category": "personal",
+      "status": "completed",
+      "description": "Phoned father."
+    },
+    {
+      "taskid": 3,
+      "title": "Finish Biology Project Report",
+      "concise_description": "Completed the project report for biology.",
+      "due_date": null,
+      "priority": null,
+      "category": "college",
+      "status": "completed",
+      "description": "Completed the project report for biology."
+    },
+    {
+      "taskid": 4,
+      "title": "Gift Sister a Cake",
+      "concise_description": "Need to get or make a cake for sister.",
+      "due_date": null,
+      "priority": null,
+      "category": "personal",
+      "status": "havent started",
+      "description": "Need to get or make a cake for sister."
+    }
+  ],
+  "summary": {
+    "Task1": "Purchase necessary food and household items.",
+    "Task2": "Make a phone call to father.",
+    "Task3": "Complete and finalize the biology project report.",
+    "Task4": "Wash and dry clothes.",
+    "Task5": "Contact boss to discuss and receive appraisal offer.",
+    "1": "Purchased food and household items.",
+    "2": "Phoned father.",
+    "3": "Completed the project report for biology.",
+    "4": "Need to get or make a cake for sister."
+  }
+}

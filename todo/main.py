@@ -2,6 +2,7 @@ from langchain_google_genai import GoogleGenerativeAI
 import dotenv
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Literal
+import datetime
 dotenv.load_dotenv()
 
 savedList = {'savedList': 'Here is your task list:\n\n*   Buy groceries\n*   Call mom\n*   Finish project report on operating system\n*   Finish laundry\n*   Call manager about meeting', 'category': "Here's the categorization of your tasks:\n\n**Work:**\n*   Call manager about meeting\n\n**College:**\n*   Finish project report on operating system\n\n**Personal:**\n*   Buy groceries\n*   Call mom\n*   Finish laundry"}
@@ -11,7 +12,19 @@ model = GoogleGenerativeAI(
     model = "gemini-2.5-flash"
     )
 
+class todoStructure(TypedDict):
+    taskid: str
+    title: str
+    description: str 
+    due_date:  datetime.datetime | None
+    priority: bool | None
+    category: Literal["work", "college", "personal"] | None
+    status: Literal["havent started", "in progress", "completed"] | None
 
+
+class todoSummary(TypedDict):
+    taskid: todoStructure.taskid
+    task_description: todoStructure.description
 
 class todoState(TypedDict):
     userInput: str
@@ -52,7 +65,7 @@ workflow = graph.compile()
 
 # Execute the graph
 
-initial_state = {'userInput': "“I need to buy groceries, call mom, and finish my project report on operating system by tomorrow. I also need to finish my laundry later today. and call my manager about the meeting tomorrow."}
+initial_state = {'userInput': "“I bought my groceries, called, and finish my project report on operating system by tomorrow. I also need to finish my laundry later today. and call my manager about the meeting tomorrow."}
 
 final_state = workflow.invoke(initial_state)
 
