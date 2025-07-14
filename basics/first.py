@@ -54,8 +54,8 @@ graph.add_edge('label',END)
 workflow = graph.compile()
 
 #Execute the graph
-userinput= float(input(">"))
-userinput_for_height = float(input(">"))
+userinput= float(input("weight in kg: "))
+userinput_for_height = float(input("height in meters: "))
 initial_state = {'weight': userinput, 'height': userinput_for_height }
 
 final_state = workflow.invoke(initial_state)
