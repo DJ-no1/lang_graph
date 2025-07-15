@@ -1,11 +1,11 @@
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 import dotenv
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict
 dotenv.load_dotenv()
 
 
-model = GoogleGenerativeAI(
+model = ChatGoogleGenerativeAI(
     model = "gemini-2.5-flash"
     )
 
