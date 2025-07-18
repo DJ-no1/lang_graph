@@ -1,4 +1,4 @@
-from langchain_google_genai import GoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 import dotenv
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict, Literal
@@ -8,9 +8,13 @@ dotenv.load_dotenv()
 savedList = {'savedList': 'Here is your task list:\n\n*   Buy groceries\n*   Call mom\n*   Finish project report on operating system\n*   Finish laundry\n*   Call manager about meeting', 'category': "Here's the categorization of your tasks:\n\n**Work:**\n*   Call manager about meeting\n\n**College:**\n*   Finish project report on operating system\n\n**Personal:**\n*   Buy groceries\n*   Call mom\n*   Finish laundry"}
 
 # model initialization
-model = GoogleGenerativeAI(
+model = ChatGoogleGenerativeAI(
     model = "gemini-2.5-flash"
     )
+
+## add structured output for model
+## use conditional flow 
+
 
 class todoStructure(TypedDict):
     taskid: str
